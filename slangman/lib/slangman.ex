@@ -1,5 +1,7 @@
 defmodule Slangman do
-  def hello do
-    IO.puts Dictionary.random_word()
-  end
+
+  alias Slangman.Game
+
+  defdelegate new_game, to: Game
+
 end

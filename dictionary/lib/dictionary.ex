@@ -1,5 +1,4 @@
 defmodule Dictionary do
-
   def random_word do
     word_list()
     |> Enum.random()
@@ -12,3 +11,4 @@ defmodule Dictionary do
     |> String.split(~r/\n/)
   end
 end
+”
