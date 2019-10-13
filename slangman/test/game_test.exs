@@ -1,4 +1,4 @@
-defmodule SlangmanTest do
+defmodule GameTest do
   use ExUnit.Case
   doctest Slangman
 
@@ -12,12 +12,11 @@ defmodule SlangmanTest do
     assert length(game.letters) > 0
   end
 
-
-  test "state isn't changed for :won or :lost state" do
+  test "state isn't changed for :won or :lost game" do
     for state <- [:won, :lost] do
       game = Game.new_game() |> Map.put(:game_state, state)
-      assert { ^game, _ } = {game, "x"}
+      assert {^game, _} = Game.make_move(game, "x")
     end
-
   end
+
 end

@@ -11,4 +11,3 @@ defmodule Dictionary do
     |> String.split(~r/\n/)
   end
 end
-”
